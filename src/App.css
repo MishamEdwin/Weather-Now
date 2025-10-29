@@ -1,13 +1,20 @@
 /* ---------- Global Styles ---------- */
-body {
-  font-family: "Inter", "Poppins", sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  font-family: "Inter", "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Ensures full height and scrollable content if needed */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 /* ---------- Main Container ---------- */
@@ -24,12 +31,12 @@ body {
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
+  margin: 2rem 0; /* adds breathing space on mobile */
 }
 
 .container:hover {
   transform: translateY(-4px);
 }
-
 
 /* ---------- Title ---------- */
 h1 {
@@ -112,15 +119,19 @@ button:hover {
   border: 1px solid #ef9a9a;
 }
 
+/* ---------- Responsive Fix ---------- */
 @media (max-width: 480px) {
   body {
-    align-items: flex-start;
-    padding-top: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
   }
 
   .container {
+    margin-right: 5px;
     width: 90%;
-    margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 }
