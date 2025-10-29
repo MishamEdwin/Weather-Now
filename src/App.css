@@ -1,48 +1,126 @@
 /* ---------- Global Styles ---------- */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
   font-family: "Inter", "Poppins", sans-serif;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
-}
-
-/* ---------- Main Container ---------- */
-body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  overflow-y: auto; /* Allow scroll on small screens */
 }
 
-/* ---------- Card ---------- */
+/* ---------- Main Container ---------- */
 .container {
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-  padding: 2rem;
+  padding: 2.2rem;
   width: 90%;
-  max-width: 360px;
+  max-width: 400px;
   text-align: center;
   color: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
-  margin: 2rem 0; /* adds breathing room on small screens */
+  transition: transform 0.3s ease-in-out;
 }
 
-/* ---------- Responsive Fix ---------- */
+.container:hover {
+  transform: translateY(-4px);
+}
+
+
+/* ---------- Title ---------- */
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+  color: #1e3c72;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* ---------- Search Box ---------- */
+.input-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.4rem;
+}
+
+input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #1e3c72;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #222;
+  background-color: #f9fafc;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #2a5298;
+  background-color: #fff;
+}
+
+button {
+  background: #1e88e5;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+/* ---------- Weather Card ---------- */
+.weather-card {
+  background: #d8ebff;
+  border-left: 5px solid #1e88e5;
+  border-radius: 10px;
+  padding: 1.4rem 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+.weather-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.weather-card strong {
+  color: #1e3c72;
+}
+
+/* ---------- Error Message ---------- */
+.error {
+  color: #c62828;
+  font-weight: 600;
+  margin-top: 10px;
+  background: #ffebee;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ef9a9a;
+}
+
 @media (max-width: 480px) {
   body {
     align-items: flex-start;
-    padding-top: 2rem; /* prevent top cut-off */
+    padding-top: 40px;
   }
 
   .container {
-    margin: 1rem;
-    width: calc(100% - 2rem);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 }
