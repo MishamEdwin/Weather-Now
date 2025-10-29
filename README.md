@@ -33,5 +33,5 @@ Follow these steps to run the app locally:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/weather-now.git
+git clone https://github.com/MishamEdwin/weather-now.git
 cd weather-now
