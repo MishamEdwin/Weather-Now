@@ -1,7 +1,8 @@
 import React from "react";
 
 function WeatherCard({ weather }) {
-  const getWeatherDescription = (code) => {
+
+  const getWeatherDescription = (code) => { // mapping the weather info based on code
     const codes = {
       0: "Clear sky ☀️",
       1: "Mainly clear 🌤️",
